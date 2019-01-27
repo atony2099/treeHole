@@ -1,33 +1,15 @@
-# treehole
+# treeHole
 
+A simple full stack project
 
+use [Taro](https://taro.aotu.io/) as front-end framewok,
+use [Egg](https://eggjs.org/) as server-side framewok
 
-## QuickStart
+the front-end code: https://github.com/atony2099/treehole_client
+the server-sider code: https://github.com/atony2099/treehole
 
-<!-- add docs here for user -->
-
-see [egg docs][egg] for more detail.
-
-### Development
-
-```bash
-$ npm i
-$ npm run dev
-$ open http://localhost:7001/
-```
-
-### Deploy
-
-```bash
-$ npm start
-$ npm stop
-```
-
-### npm scripts
-
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
-
-
-[egg]: https://eggjs.org
+Here are some sample interfaces
+![](http://ww1.sinaimg.cn/mw690/006dizvAly1fzlox3866fj30a70imabf.jpg)
+![](http://ww1.sinaimg.cn/mw690/006dizvAly1fzlox386cjj30ak0imt9b.jpg)
+![](http://ww1.sinaimg.cn/mw690/006dizvAly1fzlox38bqsj30ai0ikaaw.jpg)
+![](http://ww1.sinaimg.cn/mw690/006dizvAly1fzlozr7ny2j30af0ikdgc.jpg)
