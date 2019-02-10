@@ -19,8 +19,8 @@ services:
       - EGG_PASSPORT_GITHUB_CLIENT_ID=test
       - EGG_PASSPORT_GITHUB_CLIENT_SECRET=test
       # - EGG_SITE_STATIC_HOST=${EGG_SITE_STATIC_HOST}
-      - EGG_ALINODE_APPID=appid
-      - EGG_ALINODE_SECRET=secret
+      - EGG_ALINODE_APPID=76338
+      - EGG_ALINODE_SECRET=08991c3aea49068359d1e09d28fe106247c8e5bf
     depends_on:
       - redis
       - mongodb
