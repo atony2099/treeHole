@@ -2,7 +2,7 @@
  * @Author: atony2099
  * @Date: 2018-12-02 00:35:08
  * @Last Modified by: atony2099
- * @Last Modified time: 2019-01-27 19:40:03
+ * @Last Modified time: 2019-02-10 23:12:18
  */
 'use strict';
 module.exports = app => {
@@ -10,6 +10,10 @@ module.exports = app => {
   const { validate, createTopicLimit, pagination, skeyTake } = app.middlewares;
   const { user, topic, like, comment } = app.controller;
   // user
+  router.get('/test', async ctx => {
+    ctx.body = 'hello test';
+  });
+
   router.post('/wc_login', user.login);
 
   // topic
