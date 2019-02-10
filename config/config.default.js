@@ -39,6 +39,11 @@ module.exports = appInfo => {
       db: process.env.EGG_REDIS_DB || '0'
     }
   };
+  config.alinode = {
+    // 从 `Node.js 性能平台` 获取对应的接入参数
+    appid: process.env.EGG_ALINODE_APPID || '',
+    secret: process.env.EGG_ALINODE_SECRET || ''
+  };
 
   return config;
 };
