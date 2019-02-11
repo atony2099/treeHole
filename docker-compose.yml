@@ -27,7 +27,7 @@ services:
     networks:
       - docker_cnode
     ports:
-      - 7002:7002
+      - 7002:7001
 
   redis:
     image: redis:3.2-alpine
