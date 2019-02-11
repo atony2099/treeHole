@@ -14,7 +14,7 @@ services:
       - EGG_REDIS_HOST=redis
       - EGG_REDIS_PORT=6379
       - EGG_REDIS_PASSWORD=tree_node
-      - EGG_MONGODB_URL=mongodb://tree_node:tree_node@mongodb:27017/tree_node
+      - EGG_MONGODB_URL=mongodb://tree_node:tree_node@mongodb:27018/tree_node
       - EGG_MINI_ASSETS=true
       - EGG_PASSPORT_GITHUB_CLIENT_ID=test
       - EGG_PASSPORT_GITHUB_CLIENT_SECRET=test
@@ -52,7 +52,7 @@ services:
     networks:
       - docker_cnode
     ports:
-      - 27017:27017
+      - 27018:27017
 volumes:
   egg-mongo:
   egg-redis:
