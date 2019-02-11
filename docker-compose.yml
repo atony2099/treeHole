@@ -51,8 +51,11 @@ services:
       - ./init.d/mongo:/docker-entrypoint-initdb.d
     networks:
       - docker_cnode
-    ports:
-      - 27018:27017
+    # ports:
+    #   - 27018:27017
+    expose:
+      - '27017'
+
 volumes:
   egg-mongo:
   egg-redis:
