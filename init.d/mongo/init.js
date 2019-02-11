@@ -10,7 +10,7 @@ db.createUser({
   roles: [
     {
       role: 'readWrite',
-      db: 'egg_cnode'
+      db: 'tree_node'
     }
   ]
 });
