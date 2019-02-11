@@ -13,8 +13,8 @@ services:
       - EGG_REDIS_DB=0
       - EGG_REDIS_HOST=redis
       - EGG_REDIS_PORT=6379
-      - EGG_REDIS_PASSWORD=egg_cnode
-      - EGG_MONGODB_URL=mongodb://egg_cnode:egg_cnode@mongodb:27017/egg_cnode
+      - EGG_REDIS_PASSWORD=tree_node
+      - EGG_MONGODB_URL=mongodb://tree_node:tree_node@mongodb:27017/tree_node
       - EGG_MINI_ASSETS=true
       - EGG_PASSPORT_GITHUB_CLIENT_ID=test
       - EGG_PASSPORT_GITHUB_CLIENT_SECRET=test
@@ -27,11 +27,11 @@ services:
     networks:
       - docker_cnode
     ports:
-      - 7001:7001
+      - 7002:7002
 
   redis:
     image: redis:3.2-alpine
-    command: redis-server --appendonly yes --requirepass egg_cnode
+    command: redis-server --appendonly yes --requirepass tree_node
     volumes:
       - egg-redis:/data
     networks:
@@ -45,15 +45,14 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=mongodb
-      - MONGO_INITDB_DATABASE=egg_cnode
+      - MONGO_INITDB_DATABASE=tree_node
     volumes:
       - egg-mongo:/data/db
       - ./init.d/mongo:/docker-entrypoint-initdb.d
     networks:
       - docker_cnode
-    # ports:
-    #   - 27017:27017
-
+      # ports:
+      - 27017:27017
 volumes:
   egg-mongo:
   egg-redis:

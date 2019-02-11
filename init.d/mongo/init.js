@@ -5,8 +5,8 @@
  * 2. create collection (Before MongoDB can save your new database, a collection name must also be specified at the time of creation.)
  */
 db.createUser({
-  user: 'egg_cnode',
-  pwd: 'egg_cnode',
+  user: 'tree_node',
+  pwd: 'tree_node',
   roles: [
     {
       role: 'readWrite',
@@ -15,6 +15,6 @@ db.createUser({
   ]
 });
 
-db.egg_cnode.insert({
-  egg_cnode: 'egg-cnode'
+db.tree_node.insert({
+  tree_node: 'tree-node'
 });
