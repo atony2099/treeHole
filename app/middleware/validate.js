@@ -2,7 +2,7 @@
  * @Author: atony2099
  * @Date: 2018-12-10 18:55:55
  * @Last Modified by: atony2099
- * @Last Modified time: 2019-02-12 12:42:49
+ * @Last Modified time: 2019-02-12 12:48:32
  */
 
 'use strict';
@@ -15,10 +15,10 @@ module.exports = () => {
     const { request, service } = ctx;
 
     // 1. get user info
-    if (!request.get(wxconstant.WX_HEADER_FLAG)) {
-      await next();
-      return;
-    }
+    // if (!request.get(wxconstant.WX_HEADER_FLAG)) {
+    //   await next();
+    //   return;
+    // }
     const skey = request.query.skey || request.body.skey || request.get(wxconstant.WX_HEADER_SKEY);
     if (skey) {
       ctx.app.logger.info(skey, 'skey=======');
