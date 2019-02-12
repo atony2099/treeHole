@@ -2,7 +2,7 @@
  * @Author: atony2099
  * @Date: 2018-12-10 18:55:55
  * @Last Modified by: atony2099
- * @Last Modified time: 2019-02-12 12:48:32
+ * @Last Modified time: 2019-02-12 12:53:30
  */
 
 'use strict';
@@ -20,6 +20,7 @@ module.exports = () => {
     //   return;
     // }
     const skey = request.query.skey || request.body.skey || request.get(wxconstant.WX_HEADER_SKEY);
+    ctx.logger.info(skey, '======');
     if (skey) {
       ctx.app.logger.info(skey, 'skey=======');
       const { cache: cacheService } = service;
