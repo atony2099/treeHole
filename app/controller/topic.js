@@ -2,7 +2,7 @@
  * @Author: atony2099
  * @Date: 2018-12-13 11:43:41
  * @Last Modified by: atony2099
- * @Last Modified time: 2019-01-28 01:11:22
+ * @Last Modified time: 2019-02-12 12:40:04
  */
 
 'use strict';
@@ -110,7 +110,7 @@ class TopicController extends Controller {
     // 1. 参数验证
     const { body } = this.ctx.request;
     const { $userInfo } = this.ctx;
-    this.logger.debug(body, 'out---body', $userInfo);
+    this.logger.info(body, 'out---body', $userInfo);
     this.ctx.validate(publishRule, body);
 
     // 2.saveTopic

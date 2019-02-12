@@ -2,7 +2,7 @@
  * @Author: atony2099
  * @Date: 2018-12-10 18:55:55
  * @Last Modified by: atony2099
- * @Last Modified time: 2019-01-27 22:40:20
+ * @Last Modified time: 2019-02-12 12:42:49
  */
 
 'use strict';
@@ -21,7 +21,7 @@ module.exports = () => {
     }
     const skey = request.query.skey || request.body.skey || request.get(wxconstant.WX_HEADER_SKEY);
     if (skey) {
-      ctx.app.logger.debug(skey, 'skey=======');
+      ctx.app.logger.info(skey, 'skey=======');
       const { cache: cacheService } = service;
       let userInfo = await cacheService.get(skey);
       if (!userInfo) {
@@ -30,7 +30,7 @@ module.exports = () => {
       }
       userInfo = JSON.parse(userInfo);
       ctx.$userInfo = userInfo;
-      ctx.app.logger.debug(userInfo, 'json======userinfo');
+      ctx.app.logger.info(userInfo, 'json======userinfo');
       await next();
       // //  判断是否在有效期内
       // const notExpired = update_at.getTime() + ctx.app.config.wxLoginExpire * 1000 - Date.now();
